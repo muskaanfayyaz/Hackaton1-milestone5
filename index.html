@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Full Dynamic Editable Resume</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Fill out your details</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required><br>
+
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" placeholder="Enter your job title" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required><br>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter your location" required><br>
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" placeholder="Enter your summary" required></textarea><br>
+
+            <label for="certifications">Certifications (comma-separated):</label>
+            <input type="text" id="certifications" placeholder="Python, Cloud Computing, etc."><br>
+
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education details" required></textarea><br>
+
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" placeholder="C++, Python, etc."><br>
+
+            <label for="workExperience">Work Experience:</label>
+            <textarea id="workExperience" placeholder="Enter your work experience" required></textarea><br>
+
+            <label for="profileImage">Profile Image:</label>
+            <input type="file" id="profileImage" accept="image/*"><br><br>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+    </div>
+
+    <!-- Resume Container with Correct ID -->
+    <div id="resume-preview-section">
+            <!-- Left Section -->
+            <div class="left-section">
+                <img id="profile-picture-preview" src="./images/profile.webp" alt="Profile Picture" class="profile-picture">
+
+                <section id="summary-section">
+                    <h3 id="summary-h3">Summary</h3>
+                    <p id="summary-output" class="editable" contenteditable="true">Passionate AI enthusiast with a solid foundation in machine learning and generative AI.</p>
+                </section>
+
+                <section id="personal-info">
+                    <h3 id="profile-info-h3">Personal Information</h3>
+                    <p><strong>Name:</strong> <span id="name-output" class="editable" contenteditable="true">Muskaan Fayyaz</span></p>
+                    <p><strong>Job Title:</strong> <span id="jobTitle-output" class="editable" contenteditable="true">Generative AI Engineer</span></p>
+                    <p><strong>Phone:</strong> <span id="phone-output" class="editable" contenteditable="true">92 333-33333333</span></p>
+                    <p><strong>Email:</strong> <span id="email-output" class="editable" contenteditable="true">abc@gmail.com</span></p>
+                    <p><strong>Location:</strong> <span id="location-output" class="editable" contenteditable="true">Karachi, Pakistan</span></p>
+                </section>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <h1>Interactive Resume</h1>
+
+                <section id="certification-section">
+                    <h3>Certifications</h3>
+                    <p id="certification-output" class="editable" contenteditable="true">Python, Cloud Computing, Full Stack Web Development</p>
+                </section>
+
+                <section id="education-section">
+                    <h3>Education</h3>
+                    <p id="education-output" class="editable" contenteditable="true"><strong>Intermediate:</strong> Army Public College COD (A+ grade)</p>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills-section">
+                    <h3>Skills</h3>
+                    <ul id="skills-output" class="editable" contenteditable="true">
+                        <li>C++</li>
+                        <li>Python</li>
+                    </ul>
+                </section>
+
+                <!-- Work Experience Section -->
+                <section id="work-experience-section">
+                    <h3>Work Experience</h3>
+                    <p id="work-experience-output" class="editable" contenteditable="true">A motivated recent graduate eager to begin my professional journey.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <button id="shareResumeButton" type="button">Share Resume</button>
+    <button id="download-pdf">Download as PDF</button>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
