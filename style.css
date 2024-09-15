@@ -21,6 +21,7 @@ body {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    
 }
 
 /* Input Fields Styling */
@@ -40,6 +41,7 @@ textarea {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 /* Button Styling */
